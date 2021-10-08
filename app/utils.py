@@ -11,7 +11,7 @@ session = boto3.Session(aws_access_key_id="DUMMY_ACCESS_ID",
 dynamodb = session.resource('dynamodb', region_name='us-west-2', endpoint_url='http://localhost:8000')
 
 def get_secret():
-  table = dynamodb.Table('devops-challenge')      
+  table = dynamodb.Table('devops-challenge')
   resp = table.get_item(
   Key={
     'codeName' : 'thedoctor'
