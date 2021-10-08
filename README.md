@@ -1,8 +1,8 @@
-# challenge1
+# DevOps Challenge
 This repo contains suggested solution for DevOps Challenge.
 
 ## Requirements:
-docker and docker-composed installed
+docker and docker-compose installed on linux machine
 
 
 ## Instructions:
@@ -24,7 +24,9 @@ run solution:
 
 `run chmod +x verification.sh`
 
-2. verify anually:
+`./verification.sh`
+
+2. verify manually:
 
 `curl http://localhost:5000/secret`
 

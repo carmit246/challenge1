@@ -11,9 +11,6 @@ session = boto3.Session(aws_access_key_id="DUMMY_ACCESS_ID",
 dynamodb = session.resource('dynamodb', region_name='local', endpoint_url='http://dynamodb:8000')
 
 def get_secret():
-  # session = boto3.Session(aws_access_key_id="DUMMY_ACCESS_ID",
-  #                       aws_secret_access_key="DUMMY_SECRET_KEY")
-  # dynamodb = session.resource('dynamodb', region_name='local', endpoint_url='http://dynamodb:8000')
   table = dynamodb.Table('devops-challenge')
   resp = table.get_item(
   Key={
@@ -24,9 +21,6 @@ def get_secret():
   else: return("devops-challenge does not exists!")
 
 def create_table(): 
-  # session = boto3.Session(aws_access_key_id="DUMMY_ACCESS_ID",
-  #                       aws_secret_access_key="DUMMY_SECRET_KEY")
-  # dynamodb = session.resource('dynamodb', region_name='local', endpoint_url='http://dynamodb:8000')
   table = dynamodb.create_table(
       TableName='devops-challenge',
       KeySchema=[
@@ -55,17 +49,9 @@ def create_table():
   print("Table status:", table.table_status)
   
 def insert_data(): 
-  # session = boto3.Session(aws_access_key_id="DUMMY_ACCESS_ID",
-  #                       aws_secret_access_key="DUMMY_SECRET_KEY")
-  # dynamodb = session.resource('dynamodb', region_name='local', endpoint_url='http://dynamodb:8000')
   table = dynamodb.Table('devops-challenge')
   table.put_item(Item={
           'codeName': 'thedoctor',
           'secretCode': 'MySecret$'
       })
   print("insert data")
-
-#if __name__ == '__main__':
-  #create_table()
-  #insert_data()
-  #print(get_secret())
