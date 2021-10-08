@@ -30,4 +30,4 @@ run solution:
 
 `curl http://localhost:5000/secret`
 
-`curl http://.localhost:5000/health`
+`curl http://localhost:5000/health`
