@@ -1,7 +1,7 @@
 version: "2.2"
 services:
   dynamodb:
-    image: "amazon/dynamodb-local"
+    image: "zestyco/dynamodb-challenge" #"amazon/dynamodb-local"
     ports:
       - 8000:8000
     expose:
@@ -10,6 +10,7 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
+      image: carmitbe1/challenge1
     ports:
       - "5000:5000"
     depends_on:
