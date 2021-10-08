@@ -14,7 +14,7 @@ def get_secret():
   table = dynamodb.Table('devops-challenge')
   resp = table.get_item(
   Key={
-    'codeName' : 'thedoctor'
+    'codeName' : 'theDoctor'
   })                                     
   if 'Item' in resp:
     return(resp['Item'])
