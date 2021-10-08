@@ -3,7 +3,7 @@ from boto3.dynamodb.conditions import Key
 import os
 
 #dynamodb_host = os.environ['DYNAMODB_HOST']
-dynamodb_host = "54.216.66.226"
+dynamodb_host = "localhost" #"54.216.66.226"
 dynamodb = boto3.resource('dynamodb',endpoint_url='http://' + dynamodb_host + ':8000')
 
 def get_secret():
