@@ -44,7 +44,13 @@ def create_table():
       ProvisionedThroughput={
           'ReadCapacityUnits': 3,
           'WriteCapacityUnits': 3,
-      }
+      },
+      Tags=[
+        {
+            'Key': 'local',
+            'Value': 'yes'
+        },
+    ]
   )
   print("Table status:", table.table_status)
   
@@ -57,6 +63,7 @@ def insert_data():
           'codeName': 'thedoctor',
           'secretCode': 'MySecret$'
       })
+  print("insert data")
 
 #if __name__ == '__main__':
   #create_table()
