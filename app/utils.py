@@ -7,8 +7,7 @@ import os
 #dynamodb = boto3.resource('dynamodb',endpoint_url='http://' + dynamodb_host + ':8000')
 dynamodb = boto3.resource('dynamodb', region_name='us-west-2', endpoint_url='http://localhost:8000')
 session = boto3.session(aws_access_key_id="DUMMY_ACCESS_ID",
-                        aws_secret_access_key="DUMMY_SECRET_KEY",
-                        region_name="us-west-2")
+                        aws_secret_access_key="DUMMY_SECRET_KEY")
 
 def get_secret():
   table = dynamodb.Table('devops-challenge')      
