@@ -5,7 +5,7 @@ app = flask.Flask(__name__)
 
 @app.route('/health')
 def health():
-  return "Healthy JSON!"
+  return flask.jsonify(status="healthy!")
 
 @app.route('/secret')
 def secret():
