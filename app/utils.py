@@ -13,7 +13,7 @@ import os
 def get_secret():
   session = boto3.Session(aws_access_key_id="DUMMY_ACCESS_ID",
                         aws_secret_access_key="DUMMY_SECRET_KEY")
-  dynamodb = session.resource('dynamodb', region_name='us-west-2', endpoint_url='http://dynamodb:8000')
+  dynamodb = session.resource('dynamodb', region_name='local', endpoint_url='http://dynamodb:8000')
   table = dynamodb.Table('devops-challenge')
   resp = table.get_item(
   Key={
@@ -57,7 +57,7 @@ def create_table():
 def insert_data(): 
   session = boto3.Session(aws_access_key_id="DUMMY_ACCESS_ID",
                         aws_secret_access_key="DUMMY_SECRET_KEY")
-  dynamodb = session.resource('dynamodb', region_name='us-west-2', endpoint_url='http://dynamodb:8000')
+  dynamodb = session.resource('dynamodb', region_name='local', endpoint_url='http://dynamodb:8000')
   table = dynamodb.Table('devops-challenge')
   table.put_item(Item={
           'codeName': 'thedoctor',
