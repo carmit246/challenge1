@@ -10,7 +10,6 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
-      image: carmitbe1/challenge1
     ports:
       - "5000:5000"
     depends_on:
