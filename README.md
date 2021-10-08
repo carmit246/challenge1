@@ -22,7 +22,7 @@ run solution:
 ## Verify solution:
 1.  use verification script:
 
-`run chmod +x verification.sh`
+`chmod +x verification.sh`
 
 `./verification.sh`
 
