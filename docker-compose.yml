@@ -1,7 +1,7 @@
 version: "2.2"
 services:
   dynamodb:
-    image: "zestyco/dynamodb-challenge" #"amazon/dynamodb-local"
+    image: "zestyco/dynamodb-challenge:amd" #"amazon/dynamodb-local"
     ports:
       - 8000:8000
     expose:

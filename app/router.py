@@ -12,6 +12,6 @@ def secret():
   return get_secret()
 
 if __name__ == '__main__':
-    create_table()
-    insert_data()
+    #create_table()
+    #insert_data()
     app.run(port=5000, host="0.0.0.0")
