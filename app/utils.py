@@ -26,7 +26,7 @@ def get_secret():
 def create_table(): 
   session = boto3.Session(aws_access_key_id="DUMMY_ACCESS_ID",
                         aws_secret_access_key="DUMMY_SECRET_KEY")
-  dynamodb = session.resource('dynamodb', region_name='local', endpoint_url='http://localhost:8000')
+  dynamodb = session.resource('dynamodb', region_name='local', endpoint_url='http://dynamodb:8000')
   table = dynamodb.create_table(
       TableName='devops-challenge',
       KeySchema=[
